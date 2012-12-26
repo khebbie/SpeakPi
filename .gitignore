@@ -1,4 +1,6 @@
 *.gem
+*.log
+*.mp3
 *.rbc
 .bundle
 .config

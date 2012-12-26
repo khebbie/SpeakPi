@@ -1,0 +1,15 @@
+!!!  
+%html  
+  %head  
+    %title Raspberry PI say  
+  %body  
+    %h1 Velkommen
+    %p skriv en tekst og raspberry pi siger den  
+    %p  
+      %form{ :action => "/say", :method => "post"}
+        %fieldset
+          %ol
+            %li
+              %label{:for => "body"} Besked:
+              %textarea{:name => "body"}
+              %input{:type => "submit", :value => "Send", :class => "button"}
