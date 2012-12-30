@@ -2,6 +2,7 @@
 %html  
   %head  
     %title Raspberry PI say  
+    %script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
   %body  
     %h1 Velkommen
     %p skriv en tekst og raspberry pi siger den  
@@ -11,5 +12,9 @@
           %ol
             %li
               %label{:for => "body"} Besked:
-              %textarea{:name => "body"}
+              %textarea{:name => "body", :id => "body"}
               %input{:type => "submit", :value => "Send", :class => "button"}
+    :javascript
+      $(function() {
+        $("#body").focus();
+      });
